@@ -23,7 +23,13 @@ SOFTWARE.
 */
 
 #include "exoquant.h"
+
+#if defined(__MACH__)
+#include "malloc.h"
+#else
 #include <malloc.h>
+#endif
+
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
